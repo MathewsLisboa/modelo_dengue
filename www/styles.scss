@@ -1,0 +1,222 @@
+$white: #f0f6f7;
+$blue: #0066cc;
+$darkblue: #000066;
+$green: #009c3c;
+$yellow: #ffe436;
+$tabs-max-height: 82vh;
+
+* {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+header.main-header {
+  span.logo {
+    background-color: $blue !important;
+  }
+  
+  nav {
+    background-color: $blue !important;
+  }
+}
+
+aside.main-sidebar#sidebarCollapsed {
+  background-color: $darkblue;
+  
+  .sidebar-menu li{
+    &.active a, 
+    &:hover {
+      border-left-color: lighten($blue, 2.5%) !important;
+      background-color: lighten($darkblue, 5%) !important;
+    }
+  }
+}
+
+div.content-wrapper {
+  background-color: $white;
+  
+  div.box {
+    border-top: 3px solid darken($yellow, 15%) !important;
+  }
+  
+  label.control-label {
+    color: $green;
+  }
+  
+  .floating-box {
+    background-color: white;
+    
+    -webkit-box-shadow: 0px 0px 30px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 30px -13px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 30px -13px rgba(0,0,0,0.75);
+    
+    ul.nav-tabs li.active a {
+      color: $green;
+    }
+  }
+  
+  .wordcloud-tab {
+    margin-top: 1rem;
+  
+    .wordcloud-wrapper {
+      position: relative;
+      top: -2rem;
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-items: center;
+      
+      width: 100%;
+      height: 40vh;
+      
+      h4 {
+        position: relative;
+        top: 2rem;
+        
+        font-size: 20px;
+        font-weight: bold;
+        
+        border-radius: 4px;
+        padding: 8px;
+        margin: 0;
+        
+        background-color: lighten($blue, 70%);
+      }
+      
+      .shiny-plot-output {
+        height: 100% !important;
+        
+        border: 1px solid #999;
+        border-radius: 4px;
+        
+        overflow: hidden;
+        
+        -webkit-box-shadow: 0px 0px 30px -13px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 30px -13px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 30px -13px rgba(0,0,0,0.75);
+      }
+      
+    }
+  }
+  
+  .sentiment-tab {
+    margin-top: 1rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: $tabs-max-height;
+    
+    .sentiment-wrapper {
+      position: relative;
+      width: calc(100% - 4rem);
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-items: center;
+      
+      border: 1px solid #999;
+      border-radius: 4px;
+      padding: 1rem;
+      padding-top: 2rem;
+      margin: 2rem;
+        
+      -webkit-box-shadow: 0px 0px 30px -13px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 0px 30px -13px rgba(0,0,0,0.75);
+      box-shadow: 0px 0px 30px -13px rgba(0,0,0,0.75);
+      
+      h4 {
+        position: absolute;
+        top: -1.75rem;
+        
+        font-size: 18px;
+        font-weight: bold;
+        
+        border-radius: 4px;
+        padding: 8px;
+        margin: 0;
+        
+        background-color: lighten($blue, 70%);
+      }
+      
+      .shiny-plot-output {
+        width: 100%;
+        overflow: hidden;
+      }
+    }
+  }
+  
+  .tf-idf-tab {
+    margin-top: 1rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: $tabs-max-height;
+    
+    .tf-idf-wrapper {
+      position: relative;
+      width: calc(100% - 4rem);
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-items: center;
+      
+      border: 1px solid #999;
+      border-radius: 4px;
+      padding: 1rem;
+      padding-top: 2rem;
+      margin: 2rem;
+        
+      -webkit-box-shadow: 0px 0px 30px -13px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 0px 30px -13px rgba(0,0,0,0.75);
+      box-shadow: 0px 0px 30px -13px rgba(0,0,0,0.75);
+    }
+    
+    h4 {
+        position: absolute;
+        top: -1.75rem;
+        
+        font-size: 18px;
+        font-weight: bold;
+        
+        border-radius: 4px;
+        padding: 8px;
+        margin: 0;
+        
+        background-color: lighten($blue, 70%);
+    }
+      
+    .shiny-plot-output {
+        width: 100%;
+        overflow: hidden;
+    }
+  }
+}
+
+.about-text {
+  font-size: 16px;
+  
+  padding: 3rem;
+  border-top: 3px solid darken($yellow, 15%);
+  border-radius: 1rem;
+  
+  
+  .about-title{
+    width: 70%;
+    background-color: white;
+    
+    border-bottom: 1px solid $green;
+    -webkit-box-shadow: 0px 17px 14px -18px darken($green, 10%);
+    -moz-box-shadow: 0px 17px 14px -18px darken($green, 10%);
+    box-shadow: 0px 17px 14px -18px darken($green, 10%);
+    
+    text-align: center;
+    font-weight: bold;
+    color: darken($green, 10%);
+    
+    padding-bottom: 1rem;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+}
+
